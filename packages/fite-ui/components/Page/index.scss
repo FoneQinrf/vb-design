@@ -1,0 +1,23 @@
+@import '../../style/theme.scss';
+
+.mx-page {
+  min-height: 100vh;
+  &__head {
+    width: 100%;
+    &--fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+  }
+  &__foot {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    background: #fff;
+  }
+}
