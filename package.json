@@ -12,7 +12,7 @@
     "build": "pnpm --filter './packages/**' run build && pnpm copy:ui",
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --tag=beta --registry=https://registry.npmjs.org/",
+    "release:only": "changeset publish --tag=beta",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "copy:ui": "node ./config/copy-ui.js"
