@@ -25,18 +25,14 @@ jobs:
       - name: install pnpm
         run: npm i pnpm@latest -g
       - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
+        run: echo "//registry.npmjs.org/:always-auth=true \n //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
       - name: setup pnpm config
         run: pnpm config set store-dir $PNPM_CACHE_FOLDER
       - name: install dependencies
         run: pnpm install
       - name: build packages
         run: pnpm build
-      - name: create and publish versions
-        uses: changesets/action@v1
-        with:
-          commit: "chore: update versions"
-          title: "chore: update versions"
-          publish: pnpm ci:publish
+      - name: publish
+        run: pnpm release:only
         env:
           GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
