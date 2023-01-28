@@ -6,7 +6,7 @@ name: publish
 on:
   push:
     branches:
-      - release
+      - 'release'
 env:
   CI: true
   PNPM_CACHE_FOLDER: .pnpm-store
