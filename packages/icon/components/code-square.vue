@@ -1,0 +1,23 @@
+<template>
+  <svg :width="size" :height="size" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M39 6H9C8.44772 6 8 6.44772 8 7V41C8 41.5523 8.44772 42 9 42H39C39.5523 42 40 41.5523 40 41V7C40 6.44772 39.5523 6 39 6Z"
+      :stroke="color"
+      stroke-width="4"
+    />
+    <path
+      d="M8 7C8 6.44772 8.44772 6 9 6H39C39.5523 6 40 6.44772 40 7V41C40 41.5523 39.5523 42 39 42H9C8.44772 42 8 41.5523 8 41V7Z"
+      :stroke="color"
+      stroke-width="4"
+    />
+    <path d="M32.0725 16.5176L27.9314 31.9724" :stroke="color" stroke-width="4" />
+    <path d="M23.0711 17L16 24.0711L23.0711 31.1421" :stroke="color" stroke-width="4" />
+  </svg>
+</template>
+
+<script setup>
+import { inject } from 'vue';
+
+const size = inject('size') || 20;
+const color = inject('color') || '#4e5969';
+</script>

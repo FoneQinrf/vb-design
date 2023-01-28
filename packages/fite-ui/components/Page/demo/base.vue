@@ -2,11 +2,7 @@
   <div class="demo">
     <Page>
       <template #head>
-        <div>
-          <nut-searchbar>
-            <template #rightout> 搜索 </template>
-          </nut-searchbar>
-        </div>
+        <div></div>
       </template>
       <template #default>
         <div>内容</div>
@@ -17,7 +13,6 @@
 
 <script setup>
 import Page from '../index.tsx';
-import PageList from '../../PageList';
 </script>
 
 <style lang="scss" scoped>

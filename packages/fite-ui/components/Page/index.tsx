@@ -1,4 +1,4 @@
-import { createComponent } from '@/components/utils';
+import { createComponent } from '../utils';
 import { nextTick, onMounted, ref, type ExtractPropTypes } from 'vue';
 import { props, useOptipns } from './src/hooks';
 

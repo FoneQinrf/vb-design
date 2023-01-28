@@ -2,24 +2,11 @@
   <div class="demo">
     <Page fixed>
       <template #head>
-        <div>
-          <nut-tabs v-model="state.tabValue" @click="click">
-            <nut-tabpane title="分页列表"></nut-tabpane>
-            <nut-tabpane title="空数据"></nut-tabpane>
-          </nut-tabs>
-        </div>
+        <div></div>
       </template>
-      <template #default>
-        <PageList :fetch="fetch" ref="pageList">
-          <template v-slot="{ item, index }" #default>
-            <div style="height: 100px">自定义的内容，item：{{ item }}, index：{{ index }}</div>
-          </template>
-        </PageList>
-      </template>
+      <template #default> </template>
       <template #foot>
-        <div class="button">
-          <nut-button block type="primary">button</nut-button>
-        </div>
+        <div class="button"></div>
       </template>
     </Page>
   </div>
@@ -27,7 +14,6 @@
 
 <script lang="ts" setup>
 import Page from '../index.tsx';
-import PageList from '../../PageList';
 import { reactive, ref } from 'vue';
 
 const state = reactive({

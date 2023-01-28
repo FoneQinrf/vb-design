@@ -36,7 +36,7 @@ export default defineConfig({
           vue: 'Vue',
         },
         paths: {
-          '@/components/utils': './components/utils',
+          '@/components/utils': '../components/utils',
         },
       },
     },

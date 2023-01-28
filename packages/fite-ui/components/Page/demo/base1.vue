@@ -5,9 +5,7 @@
         <div>内容</div>
       </template>
       <template #foot>
-        <div class="button">
-          <nut-button block type="primary">添加</nut-button>
-        </div>
+        <div class="button"></div>
       </template>
     </Page>
   </div>
@@ -15,7 +13,6 @@
 
 <script setup>
 import Page from '../index.tsx';
-import PageList from '../../PageList';
 </script>
 
 <style lang="scss" scoped>

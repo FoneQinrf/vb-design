@@ -1,0 +1,21 @@
+<template>
+  <svg :width="size" :height="size" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M34.4145 35.8549C35.0758 36.3325 36 35.86 36 35.0442L36 12.9558C36 12.14 35.0758 11.6675 34.4145 12.1451L19.1225 23.1893C18.5698 23.5885 18.5698 24.4115 19.1225 24.8107L34.4145 35.8549Z"
+      :fill="color"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M15 12C15.5523 12 16 12.4477 16 13L16 35C16 35.5523 15.5523 36 15 36L13 36C12.4477 36 12 35.5523 12 35L12 13C12 12.4477 12.4477 12 13 12L15 12Z"
+      :fill="color"
+    />
+  </svg>
+</template>
+
+<script setup>
+import { inject } from 'vue';
+
+const size = inject('size') || 20;
+const color = inject('color') || '#4e5969';
+</script>

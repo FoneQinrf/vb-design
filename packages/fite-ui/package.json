@@ -32,7 +32,7 @@
     "test:dev": "vitest"
   },
   "keywords": [],
-  "author": "@mx",
+  "author": "Fone丶峰",
   "license": "ISC",
   "devDependencies": {
     "@rollup/pluginutils": "^4.2.1",
@@ -41,14 +41,14 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
-    "postcss-px-to-viewport": "^1.1.1",
     "sass": "^1.54.8",
-    "tiny-glob": "^0.2.9",
-    "typescript": "^4.8.2"
-  },
-  "dependencies": {
+    "tiny-glob": "^0.2.9"
   },
   "volta": {
-    "node": "14.19.0"
+    "node": "16.13.0"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "pnpm": ">=6"
   }
 }

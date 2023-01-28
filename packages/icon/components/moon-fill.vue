@@ -1,0 +1,15 @@
+<template>
+  <svg :width="size" :height="size" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M42.1084 29.769C42.2317 29.3817 41.8501 29.0329 41.4628 29.1561C39.7399 29.7042 37.9045 30 36 30C26.0589 30 18 21.9411 18 12C18 10.0955 18.2958 8.26017 18.8438 6.53731C18.9671 6.15004 18.6182 5.76847 18.231 5.89174C10.5581 8.33406 5 15.518 5 24.0001C5 34.4935 13.5066 43.0001 24 43.0001C32.4822 43.0001 39.6661 37.4419 42.1084 29.769Z"
+      :fill="color"
+    />
+  </svg>
+</template>
+
+<script setup>
+import { inject } from 'vue';
+
+const size = inject('size') || 20;
+const color = inject('color') || '#4e5969';
+</script>

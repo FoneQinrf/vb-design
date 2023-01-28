@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import { version } from '@/package.json';
+import { version } from '../../package.json';
 import type { ComponentPropsOptions, ExtractPropTypes, SetupContext, RenderFunction, Component, App } from 'vue';
 
 export type WithInstall<T> = T & {
@@ -68,7 +68,7 @@ export const isEmpty = (options: any) => isNull(options) || isUndefined(options)
 export const range = (num: number, arr: Array<number>) => Math.min(Math.max(num, arr[0]), arr[1]);
 
 export function createComponent(name: string) {
-  const componentName = `mx-${name}`;
+  const componentName = `fite-${name}`;
   return {
     bem: (fix?: string | undefined) => {
       return fix ? `${componentName}__${fix}` : componentName;

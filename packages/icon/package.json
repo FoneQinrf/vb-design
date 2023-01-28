@@ -1,0 +1,30 @@
+{
+  "name": "@fite-design/icon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/icon.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/icon.es.js",
+      "require": "./dist/icon.umd.js"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "svg": "node ./svgTovue.js",
+    "build": "pnpm svg && vite build --config vite.build.ts"
+  },
+  "keywords": [],
+  "author": "Fone丶峰",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "volta": {
+    "node": "16.13.0"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "pnpm": ">=6"
+  }
+}

@@ -1,0 +1,26 @@
+<template>
+  <svg :width="size" :height="size" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_1_4225)">
+      <circle cx="24" cy="24" r="20" :fill="color" />
+      <path d="M18 17V23" stroke="white" stroke-width="4" />
+      <path d="M30 17V23" stroke="white" stroke-width="4" />
+      <path
+        d="M16.5816 28.1047C16.9721 29.0717 17.5593 29.9777 18.3431 30.7616C21.4673 33.8858 26.5327 33.8858 29.6569 30.7616C30.4407 29.9777 31.0279 29.0717 31.4184 28.1047"
+        stroke="white"
+        stroke-width="4"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1_4225">
+        <rect width="48" height="48" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+</template>
+
+<script setup>
+import { inject } from 'vue';
+
+const size = inject('size') || 20;
+const color = inject('color') || '#4e5969';
+</script>
