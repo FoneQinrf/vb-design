@@ -14,9 +14,7 @@
     "access": "public"
   },
   "scripts": {
-    "build:lib": "vite build --config vite.build.ts",
-    "build:src": "node ./vite.build.src.ts",
-    "build": "pnpm build:src && pnpm build:lib"
+    "build": "vite build --config vite.build.ts"
   },
   "keywords": [],
   "author": "Fone丶峰",
