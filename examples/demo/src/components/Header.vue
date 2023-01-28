@@ -9,6 +9,6 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--fite-primary-color);
+  background: var(--vb-primary-color);
 }
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "@fite-design/hooks",
+  "name": "@vb-design/hooks",
   "version": "0.0.1-beta",
   "description": "",
   "main": "./dist/index.umd.js",

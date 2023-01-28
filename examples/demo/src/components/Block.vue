@@ -1,9 +1,9 @@
 <template>
-  <div class="fite-block">
-    <div class="fite-block__title">
+  <div class="vb-block">
+    <div class="vb-block__title">
       {{ props.title }}
     </div>
-    <div :class="{ 'fite-block__body': true, 'fite-block__flex': props.flex }">
+    <div :class="{ 'vb-block__body': true, 'vb-block__flex': props.flex }">
       <slot />
     </div>
   </div>
@@ -19,14 +19,14 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-.fite-block {
+.vb-block {
   &__body {
-    background: var(--fite-white);
+    background: var(--vb-white);
     padding: 16px;
   }
   &__title {
     padding: 8px 16px;
-    color: var(--fite-text-color-3);
+    color: var(--vb-text-color-3);
   }
   &__flex {
     display: flex;

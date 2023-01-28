@@ -33,7 +33,7 @@ export default defineConfig({
     Pages({
       dirs: [
         {
-          dir: resolve(__dirname, '../../packages/fite-ui/components'),
+          dir: resolve(__dirname, '../../packages/ui-h5/components'),
           baseRoute: 'component',
         },
       ],

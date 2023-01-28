@@ -147,10 +147,10 @@ onMounted(() => {
   .jump {
     padding: 6px 0;
     cursor: pointer;
-    color: var(--fite-primary-color);
+    color: var(--vb-primary-color);
     font-size: 12px;
     &:hover {
-      color: var(--fite-primary-color-hover);
+      color: var(--vb-primary-color-hover);
     }
   }
 }

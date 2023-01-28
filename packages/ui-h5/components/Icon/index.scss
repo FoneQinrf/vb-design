@@ -1,0 +1,33 @@
+@import '../../style/theme.scss';
+
+@font-face {
+  font-family: 'vb-icon'; /* Project id 3594031 */
+  src: url('//at.alicdn.com/t/c/font_3594031_hopcl8nkmag.woff2?t=1674118006948') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3594031_hopcl8nkmag.woff?t=1674118006948') format('woff'),
+    url('//at.alicdn.com/t/c/font_3594031_hopcl8nkmag.ttf?t=1674118006948') format('truetype');
+}
+
+.vb-icon {
+  font-family: 'vb-icon' !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vb-icon-loading:before {
+  content: '\e644';
+}
+
+:root {
+  --file-icon-color: var(--vb-text-color-4);
+}
+
+.vb-icon {
+  --color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor;
+  color: var(--file-icon-color);
+}

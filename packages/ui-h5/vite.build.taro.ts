@@ -7,7 +7,7 @@ import config from './package.json';
 
 const banner = `/*!
 * ${config.name} v${config.version} ${new Date()}
-* (c) 2022 @vb-design/icon
+* (c) 2022 @mx
 * Released under the MIT License.
 */
 \n
@@ -19,23 +19,26 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     minify: true,
     lib: {
-      entry: resolve(__dirname, 'index.ts'),
-      name: 'vbIcon',
-      fileName: format => {
-        return `icon.${format}.js`;
-      },
+      entry: resolve(__dirname, 'ui.taro.ts'),
+      name: 'vbUI',
       formats: ['es', 'umd'],
+      fileName: format => {
+        return `vb-ui.taro.${format}.js`;
+      },
     },
     rollupOptions: {
-      external: ['vue', 'lodash-es'],
+      external: ['vue', '@tarojs/taro', '@/components/utils', 'lodash-es'],
       output: {
         banner,
         globals: {
           vue: 'Vue',
         },
+        paths: {
+          '@/components/utils': './components/utils',
+        },
       },
     },
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
   plugins: [
     jsx(),

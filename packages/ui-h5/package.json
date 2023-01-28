@@ -1,0 +1,54 @@
+{
+  "name": "@vb-design/ui-h5",
+  "version": "0.0.1-beta",
+  "description": "",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "./dist/vb-ui.umd.js",
+  "module": "./dist/vb-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vb-ui.es.js",
+      "require": "./dist/vb-ui.umd.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:package && npm run build:style && npm run build:theme && npm run build:css && pnpm build:taro",
+    "build:lib": "vite build --config vite.build.ts",
+    "build:package": "node ./vite.build.packages.ts",
+    "build:style": "vite build --config vite.build.style.ts",
+    "build:theme": "gulp build --gulpfile gulpfile.scss.js",
+    "build:taro": "vite build --config vite.build.taro.ts",
+    "build:css": "node ./vite.build.css.js",
+    "dev": "vite",
+    "build:docs": "vite build",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "test:dev": "vitest"
+  },
+  "keywords": [],
+  "author": "Fone丶峰",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/pluginutils": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.54.8",
+    "tiny-glob": "^0.2.9"
+  },
+  "volta": {
+    "node": "16.13.0"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "pnpm": ">=6"
+  }
+}

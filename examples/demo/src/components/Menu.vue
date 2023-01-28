@@ -41,8 +41,8 @@ const menu = getMenu();
       font-size: 16px;
     }
     .router-link-active {
-      color: var(--fite-primary-color);
-      background: var(--fite-primary-color-default);
+      color: var(--vb-primary-color);
+      background: var(--vb-primary-color-default);
       &::after {
         position: absolute;
         content: '';
@@ -50,7 +50,7 @@ const menu = getMenu();
         height: 100%;
         top: 50%;
         right: -1px;
-        background: var(--fite-primary-color);
+        background: var(--vb-primary-color);
         transform: translate(0, -50%);
       }
     }

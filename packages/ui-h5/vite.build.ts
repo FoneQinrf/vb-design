@@ -5,9 +5,11 @@ import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 import config from './package.json';
 
+// const glob = require('tiny-glob');
+
 const banner = `/*!
 * ${config.name} v${config.version} ${new Date()}
-* (c) 2022 @vb-design/icon
+* (c) 2022 @mx
 * Released under the MIT License.
 */
 \n
@@ -19,19 +21,22 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     minify: true,
     lib: {
-      entry: resolve(__dirname, 'index.ts'),
-      name: 'vbIcon',
+      entry: resolve(__dirname, 'ui.h5.ts'),
+      name: 'vbUI',
       fileName: format => {
-        return `icon.${format}.js`;
+        return `vb-ui.${format}.js`;
       },
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['vue', 'lodash-es'],
+      external: ['vue', '@tarojs/taro', '@/components/utils', 'lodash-es'],
       output: {
         banner,
         globals: {
           vue: 'Vue',
+        },
+        paths: {
+          '@/components/utils': '../components/utils',
         },
       },
     },

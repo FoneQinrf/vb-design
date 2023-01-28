@@ -90,7 +90,16 @@ importers:
       vite-plugin-pages: 0.26.0
       vite-plugin-vue-layouts: 0.7.0_xsxatmlnmmg5bcuv3xdnj6fj7y
 
-  packages/fite-ui:
+  packages/hooks:
+    specifiers: {}
+
+  packages/icon:
+    specifiers:
+      lodash-es: ^4.17.21
+    devDependencies:
+      lodash-es: 4.17.21
+
+  packages/ui-h5:
     specifiers:
       '@rollup/pluginutils': ^4.2.1
       gulp: ^4.0.2
@@ -110,7 +119,7 @@ importers:
       sass: 1.56.2
       tiny-glob: 0.2.9
 
-  packages/fite-ui-taro:
+  packages/ui-taro:
     specifiers:
       '@rollup/pluginutils': ^4.2.1
       '@types/crypto-js': ^4.1.1
@@ -168,15 +177,6 @@ importers:
       vite-plugin-md: 0.20.6_sass@1.56.2
       vite-plugin-pages: 0.26.0
       vite-plugin-vue-layouts: 0.7.0_vue-router@4.1.6
-
-  packages/hooks:
-    specifiers: {}
-
-  packages/icon:
-    specifiers:
-      lodash-es: ^4.17.21
-    devDependencies:
-      lodash-es: 4.17.21
 
 packages:
 

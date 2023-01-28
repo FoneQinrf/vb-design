@@ -1,23 +1,23 @@
 <template>
-  <div class="fite-demo__icon">
+  <div class="vb-demo__icon">
     <div class="title">svg图标</div>
-    <div class="fite-demo__body">
+    <div class="vb-demo__body">
       <div v-for="item in icons" class="icon-wrp">
-        <fite-icon :size="24">
+        <vb-icon :size="24">
           <component :is="item" />
-        </fite-icon>
+        </vb-icon>
       </div>
     </div>
     <div class="title">svg图标</div>
-    <div class="fite-demo__body">
-      <fite-icon :size="24" name="fite-icon-loading" />
+    <div class="vb-demo__body">
+      <vb-icon :size="24" name="vb-icon-loading" />
     </div>
   </div>
 </template>
 
 <script>
 import * as icons from '../../../../packages/icon/index';
-import { Icon } from '../../../../packages/fite-ui/fite-ui';
+import { Icon } from '../../../../packages/ui-h5/ui.h5';
 
 export default {
   components: {
@@ -36,11 +36,11 @@ export default {
   font-size: 16px;
   font-weight: bold;
 }
-.fite-demo__body {
+.vb-demo__body {
   display: flex;
   flex-wrap: wrap;
 }
-.fite-demo__icon {
+.vb-demo__icon {
   width: 100%;
 }
 .icon-wrp {
