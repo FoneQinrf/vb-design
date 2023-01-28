@@ -1,6 +1,6 @@
 {
-  "name": "@vb-design/icons",
-  "version": "0.0.1-beta",
+  "name": "@vb-design/icon",
+  "version": "0.0.1-beta1",
   "description": "",
   "main": "./dist/icon.es.js",
   "exports": {
@@ -17,6 +17,9 @@
   "scripts": {
     "svg": "node ./svgTovue.js",
     "build": "pnpm svg && vite build --config vite.build.ts"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "Fone丶峰",

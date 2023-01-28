@@ -1,6 +1,6 @@
 {
   "name": "@vb-design/hooks",
-  "version": "0.0.1-beta",
+  "version": "0.0.1-beta1",
   "description": "",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
