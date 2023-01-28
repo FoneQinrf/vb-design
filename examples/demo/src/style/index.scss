@@ -1,0 +1,76 @@
+@import 'highlight.js/scss/atom-one-light.scss';
+@import '../../../../packages/fite-ui/style/animation.scss';
+@import '../../../../packages/fite-ui/style.scss';
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+#app {
+  min-height: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: dashed;
+  color: #333;
+}
+.markdown-body {
+  pre {
+    margin-top: 20px;
+    code {
+      padding: 16px;
+      display: block;
+      line-height: 26px;
+      background: #fafafa;
+      font-size: 14px;
+      // border-radius: 12px;
+      margin: 0;
+      white-space: pre-wrap;
+    }
+  }
+  code {
+    display: inline;
+    margin: 0 2px;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-family: inherit;
+    word-break: keep-all;
+    background-color: #eeeeef;
+    border-radius: 2px;
+  }
+  p {
+    color: #666;
+  }
+  table {
+    width: 100%;
+    color: #666;
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    font-size: 14px;
+    th {
+      padding: 8px 20px;
+      font-weight: 500;
+      text-align: left;
+      border-left: 1px solid #e9e9e9;
+      background-color: #f7f8fa;
+      &:first-child {
+        border-left: 0px;
+      }
+    }
+    td {
+      padding: 8px 20px;
+      border-top: 1px solid #f1f4f8;
+      border-left: 1px solid #e9e9e9;
+      &:first-child {
+        border-left: 0px;
+      }
+    }
+  }
+}
