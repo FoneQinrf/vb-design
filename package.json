@@ -12,7 +12,7 @@
     "build": "pnpm --filter './packages/**' run build && pnpm copy:ui",
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --tag=beta",
+    "release:only": "changeset publish --tag=beta --access=publish",
     "ci:publish": "pnpm publish -r",
     "changeset": "changeset",
     "version-packages": "changeset version",
