@@ -1,8 +1,15 @@
 {
-  "name": "@mx-design/hooks",
+  "name": "@fite-design/hooks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -12,6 +19,6 @@
     "build": "pnpm build:src && pnpm build:lib"
   },
   "keywords": [],
-  "author": "@mx",
+  "author": "Fone丶峰",
   "license": "ISC"
 }

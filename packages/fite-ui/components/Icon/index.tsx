@@ -24,13 +24,17 @@ export default create({
         fontSize: `${prop.size}px`,
       };
     });
+    const iconDefault = computed(() => {
+      //class优先于slot
+      return prop.name ? [] : [slots.default?.()];
+    });
 
     provide('size', computed(() => prop.size).value);
     provide('color', computed(() => prop.color).value);
     return () => {
       return (
         <i class={clasess.value} style={style.value}>
-          {slots.default?.()}
+          {iconDefault.value}
         </i>
       );
     };

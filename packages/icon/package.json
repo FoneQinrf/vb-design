@@ -1,6 +1,6 @@
 {
   "name": "@fite-design/icon",
-  "version": "1.0.0",
+  "version": "0.0.1-beta",
   "description": "",
   "main": "./dist/icon.es.js",
   "exports": {

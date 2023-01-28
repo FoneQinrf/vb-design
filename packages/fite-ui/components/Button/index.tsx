@@ -56,9 +56,9 @@ export default create({
 
     const defaultRender = computed(() => {
       if (loading.value) {
-        return <div>{prop.loadingText || slots.default?.()}</div>;
+        return <div class={bem('content--text')}>{prop.loadingText || slots.default?.()}</div>;
       }
-      return slots.default ? <div>{slots.default?.()}</div> : [];
+      return slots.default ? <div class={bem('content--text')}>{slots.default?.()}</div> : [];
     });
 
     const iconRender = computed(() => {
@@ -73,7 +73,7 @@ export default create({
     });
 
     const iconRightRender = () => {
-      return slots['right-icon'] ? <div class={bem('icon--right')}>{slots['right-icon']()}</div> : [];
+      return slots['right-icon'] ? <div class={[bem('icon'), bem('icon--right')]}>{slots['right-icon']()}</div> : [];
     };
 
     watch(

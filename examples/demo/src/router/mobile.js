@@ -10,7 +10,6 @@ const routeList = routes.filter((item) => {
   }
 });
 
-console.log(setupLayouts(routeList));
 const router = createRouter({
   history: createWebHashHistory(basePath),
   routes: setupLayouts(routeList),
