@@ -13,6 +13,7 @@
     "preinstall": "npx only-allow pnpm",
     "release": "pnpm build && pnpm release:only",
     "release:only": "changeset publish --tag=beta",
+    "ci:publish": "pnpm publish -r",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "copy:ui": "node ./config/copy-ui.js"

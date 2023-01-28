@@ -24,15 +24,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
       - name: Install dependencies
-        run: |
-          pnpm install
-          pnpm lint
+        run: pnpm install
+      - name: lint
+        run: pnpm lint
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.13.0]
-      
+    needs: lint
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -43,10 +43,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - name: Install dependencies
-        run: |
-          pnpm install
-          pnpm test
+      - name: test
+        run: pnpm test
   
 
 
