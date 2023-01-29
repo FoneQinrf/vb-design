@@ -30,9 +30,9 @@ jobs:
     - name: Install dependencies
     - run: pnpm install
     - run: npx changelogithub --no-group
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      continue-on-error: true
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: build packages
       run: pnpm build
