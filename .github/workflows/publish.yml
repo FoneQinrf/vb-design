@@ -1,4 +1,4 @@
-name: publish
+name: Publish Package
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,19 +25,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         registry-url: https://registry.npmjs.org/
-        cache: pnpm
+        cache: 'pnpm'
 
-    - name: Install dependencies
     - run: pnpm install
     - run: npx changelogithub --no-group
       continue-on-error: true
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-    - name: build packages
-      run: pnpm build
+    - run: pnpm build
       
-    - name: publish
-      run: pnpm release:only
+    - run: pnpm release:only
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
