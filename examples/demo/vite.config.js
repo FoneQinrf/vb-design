@@ -12,6 +12,7 @@ import hljs from 'highlight.js';
 import MdContainer from 'markdown-it-container';
 
 export default defineConfig({
+  base: '/vb-design/',
   build: {
     cssCodeSplit: true,
     rollupOptions: {
