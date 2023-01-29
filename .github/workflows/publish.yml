@@ -3,7 +3,7 @@ name: Publish Package
 on:
   push:
     branches:
-      - release
+      - next
 
 jobs:
   publish:
@@ -34,3 +34,36 @@ jobs:
       run: pnpm release:only
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  
+  docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.13.0]
+    steps:
+    - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 7
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+        
+    - name: Install
+      run: pnpm install
+    
+    - name: Build
+      run: pnpm build:demo
+      
+    - name: Pull Docs
+      run: |
+        cd ./examples/demo/dist
+        git init
+        git config user.name "${{secrets.GIT_NAME}}"
+        git config user.email "${{secrets.GIT_EMAIL}}"
+        git add .
+        git commit -m "docs"
+        git push --quiet --force "https://${{secrets.GIT_TOKEN}}@${{secrets.GIT_REF}}" main:gh-pages 
