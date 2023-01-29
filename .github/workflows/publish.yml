@@ -66,4 +66,4 @@ jobs:
         git config user.email "${{secrets.GIT_EMAIL}}"
         git add .
         git commit -m "docs"
-        git push --quiet --force "https://${{secrets.GIT_TOKEN}}@${{secrets.GIT_REF}}" main:gh-pages 
+        git push --quiet --force "https://${{secrets.GIT_TOKEN}}@${{secrets.GIT_REF}}" master:gh-pages 
