@@ -70,7 +70,7 @@ const copyCode = () => {
 
 onMounted(() => {
   nextTick(() => {
-    src.value = `${origin}${basePath}mobile.html#${route.path}/${demoCode.value.dataset.url}`;
+    src.value = `${origin}${basePath}vb-design/mobile.html#${route.path}/${demoCode.value.dataset.url}`;
   });
 
   //   console.log(decodeBase64(code.value.dataset.value));

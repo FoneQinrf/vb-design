@@ -25,7 +25,7 @@ const isDemo = computed(() => {
 });
 
 const src = computed(() => {
-  return `${origin}${basePath}mobile.html#${route.path}/demo`;
+  return `${origin}${basePath}/vb-design/mobile.html#${route.path}/demo`;
 });
 </script>
 
