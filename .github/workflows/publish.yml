@@ -2,8 +2,8 @@ name: Publish Package
 
 on:
   push:
-    branches:
-      - next
+    tags:
+      - 'v*'
 
 jobs:
   publish:
@@ -34,7 +34,7 @@ jobs:
       run: pnpm release:only
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  
+
   docs:
     needs: publish
     runs-on: ubuntu-latest
