@@ -2,8 +2,8 @@ name: Publish Package
 
 on:
   push:
-    branches:
-      - release
+    tags:
+      - 'v*'
 
 jobs:
   publish:
@@ -34,8 +34,9 @@ jobs:
       run: pnpm release:only
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-  
+
   docs:
+    needs: publish
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -58,14 +59,10 @@ jobs:
     - name: Build
       run: pnpm build:demo
       
-    - name: Pull Docs
-      run: |
-        cd ./examples/demo/dist
-        git init
-        git config user.name "${{secrets.GIT_NAME}}"
-        git config user.email "${{secrets.GIT_EMAIL}}"
-        git add .
-        git commit -m "docs"
-        git push --quiet --force "https://${{secrets.GIT_TOKEN}}@${{secrets.GIT_REF}}" master:gh-pages       
-      
-        
+    - name: Pull Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: examples/demo/dist
+        BASE_BRANCH: main

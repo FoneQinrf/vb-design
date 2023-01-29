@@ -16,7 +16,8 @@
     "ci:publish": "pnpm publish -r",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "copy:ui": "node ./config/copy-ui.js"
+    "copy:ui": "node ./config/copy-ui.js",
+    "build:demo": "pnpm --filter './examples/**' run build"
   },
   "keywords": [],
   "author": "Fone丶峰",
