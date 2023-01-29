@@ -5,6 +5,9 @@ on:
   push: 
     branches:
       - '**'
+    branches-ignore:
+      - main
+      - release
       
 jobs:
   lint:
