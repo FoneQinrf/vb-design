@@ -24,11 +24,10 @@ jobs:
     - name: Install dependencies
       run: pnpm install
     - name: Setup npmrc
-      run: echo "//registry.npmjs.org/:always-auth=true \n //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
+      run: echo "//registry.npmjs.org/:always-auth=true \n //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
     - name: build packages
       run: pnpm build
     - name: publish
       run: pnpm release:only
       env:
-        GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
-        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
