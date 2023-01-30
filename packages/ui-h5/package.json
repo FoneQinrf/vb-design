@@ -41,8 +41,7 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.54.8",
-    "tiny-glob": "^0.2.9"
+    "sass": "^1.54.8"
   },
   "volta": {
     "node": "16.13.0"
