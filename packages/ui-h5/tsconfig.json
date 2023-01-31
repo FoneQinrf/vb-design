@@ -26,8 +26,8 @@
     "components/**/*.d.ts",
     "components/**/*.tsx",
     "components/**/*.vue",
-    "vb-ui.ts",
-    "vb-ui.taro.ts"
+    "ui.h5.ts",
+    "ui.taro.ts"
   ],
   "exclude": ["./node_modules", "components.d.ts", "./dist"]
 }

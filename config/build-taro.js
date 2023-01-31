@@ -2,7 +2,7 @@ const { resolve, sep } = require('path');
 const fs = require('fs-extra');
 const glob = require('tiny-glob');
 
-const filterList = ['index.js', 'vb-ui.es.js', 'vb-ui.umd.js', 'vb-ui.d.ts', 'vb-ui.es.d.ts'];
+const filterList = ['index.js', 'vb-ui.es.js', 'vb-ui.umd.js', 'vb-ui.d.ts', 'vb-ui.es.d.ts', 'ui.h5.d.ts'];
 
 if (fs.existsSync(resolve(__dirname, '../packages/ui-taro/dist'))) {
   fs.removeSync(resolve(__dirname, '../packages/ui-taro/dist'));

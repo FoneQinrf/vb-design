@@ -20,7 +20,7 @@
 }
 
 :root {
-  --file-icon-color: var(--vb-text-color-4);
+  --vb-icon-color: var(--vb-text-color-4);
 }
 
 .vb-icon {
@@ -29,5 +29,5 @@
   align-items: center;
   justify-content: center;
   fill: currentColor;
-  color: var(--file-icon-color);
+  color: var(--vb-icon-color);
 }
