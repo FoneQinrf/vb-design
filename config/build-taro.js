@@ -10,6 +10,7 @@ if (fs.existsSync(resolve('packages/ui-taro/dist'))) {
 
 const fileList = [];
 console.log(resolve());
+console.log(resolve(__dirname));
 fs.copySync(resolve('packages/ui-h5/dist'), resolve('packages/ui-taro/dist'), {
   filter: file => {
     const arr = file.split(sep);
@@ -26,11 +27,11 @@ fileList.forEach(item => {
   }
 });
 
-(async function () {
-  const files = await glob(`${resolve('packages/ui-taro/dist')}/**/**.js`);
-  files.forEach(ele => {
-    const str = fs.readFileSync(ele, 'utf-8');
-    const context = str.replace(new RegExp('"div"', 'g'), '"view"');
-    fs.writeFileSync(ele, context);
-  });
-})();
+// (async function () {
+//   const files = await glob(`${resolve('packages/ui-taro/dist')}/**/**.js`);
+//   files.forEach(ele => {
+//     const str = fs.readFileSync(ele, 'utf-8');
+//     const context = str.replace(new RegExp('"div"', 'g'), '"view"');
+//     fs.writeFileSync(ele, context);
+//   });
+// })();
