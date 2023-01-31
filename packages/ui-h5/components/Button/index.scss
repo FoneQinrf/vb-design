@@ -11,20 +11,20 @@
   --vb-button-success-color: var(--vb-success-color);
   --vb-button-success-color-hover: var(--vb-success-color-hover);
 
-  --file-button-warning-color: var(--vb-warning-color);
-  --file-button-warning-color-hover: var(--vb-warning-color-hover);
+  --vb-button-warning-color: var(--vb-warning-color);
+  --vb-button-warning-color-hover: var(--vb-warning-color-hover);
 
-  --file-button-danger-color: var(--vb-danger-color);
-  --file-button-danger-color-hover: var(--vb-danger-color-hover);
+  --vb-button-danger-color: var(--vb-danger-color);
+  --vb-button-danger-color-hover: var(--vb-danger-color-hover);
 
-  --file-button-size-mini: 28px;
-  --file-button-size-small: 32px;
+  --vb-button-size-mini: 28px;
+  --vb-button-size-small: 32px;
   --vb-button-size-large: 44px;
-  --file-button-size-default: 36px;
-  --file-button-size-mini-padding: 0 16px;
-  --file-button-size-small-padding: 0 20px;
-  --file-button-size-default-padding: 0 24px;
-  --file-button-size-large-padding: 0 32px;
+  --vb-button-size-default: 36px;
+  --vb-button-size-mini-padding: 0 16px;
+  --vb-button-size-small-padding: 0 20px;
+  --vb-button-size-default-padding: 0 24px;
+  --vb-button-size-large-padding: 0 32px;
 }
 
 .vb-button {
@@ -32,12 +32,12 @@
   text-align: center;
   box-sizing: border-box;
   user-select: none;
-  padding: var(--file-button-size-default-padding);
-  height: var(--file-button-size-default);
-  line-height: var(--file-button-size-default);
+  padding: var(--vb-button-size-default-padding);
+  height: var(--vb-button-size-default);
+  line-height: var(--vb-button-size-default);
   border: none;
   border-radius: var(--vb-button-border-radius);
-  font-size: var(--file-font-size-15);
+  font-size: var(--vb-font-size-15);
 
   .vb-icon {
     color: var(--vb-button-white);
@@ -57,17 +57,17 @@
     }
   }
   &__warning {
-    background: var(--file-button-warning-color);
+    background: var(--vb-button-warning-color);
     color: var(--vb-button-white);
     &:active {
-      background: var(--file-button-warning-color-hover);
+      background: var(--vb-button-warning-color-hover);
     }
   }
   &__danger {
-    background: var(--file-button-danger-color);
+    background: var(--vb-button-danger-color);
     color: var(--vb-button-white);
     &:active {
-      background: var(--file-button-danger-color-hover);
+      background: var(--vb-button-danger-color-hover);
     }
   }
 
@@ -78,24 +78,24 @@
   &__ghost {
     &--danger {
       background: var(--vb-button-white);
-      border: 1px solid var(--file-button-danger-color);
-      color: var(--file-button-danger-color);
+      border: 1px solid var(--vb-button-danger-color);
+      color: var(--vb-button-danger-color);
       &:active {
         background: var(--vb-danger-color-default);
       }
       .vb-icon {
-        color: var(--file-button-danger-color);
+        color: var(--vb-button-danger-color);
       }
     }
     &--warning {
       background: var(--vb-button-white);
-      border: 1px solid var(--file-button-warning-color);
-      color: var(--file-button-warning-color);
+      border: 1px solid var(--vb-button-warning-color);
+      color: var(--vb-button-warning-color);
       &:active {
         background: var(--vb-warning-color-default);
       }
       .vb-icon {
-        color: var(--file-button-warning-color);
+        color: var(--vb-button-warning-color);
       }
     }
     &--primary {
@@ -124,22 +124,22 @@
 
   &__size {
     &--mini {
-      font-size: var(--file-font-size-12);
-      height: var(--file-button-size-mini);
-      line-height: var(--file-button-size-mini);
-      padding: var(--file-button-size-mini-padding);
+      font-size: var(--vb-font-size-12);
+      height: var(--vb-button-size-mini);
+      line-height: var(--vb-button-size-mini);
+      padding: var(--vb-button-size-mini-padding);
     }
     &--small {
-      font-size: var(--file-font-size-14);
-      height: var(--file-button-size-small);
-      line-height: var(--file-button-size-small);
-      padding: var(--file-button-size-small-padding);
+      font-size: var(--vb-font-size-14);
+      height: var(--vb-button-size-small);
+      line-height: var(--vb-button-size-small);
+      padding: var(--vb-button-size-small-padding);
     }
     &--large {
-      font-size: var(--file-font-size-16);
+      font-size: var(--vb-font-size-16);
       height: var(--vb-button-size-large);
       line-height: var(--vb-button-size-large);
-      padding: var(--file-button-size-large-padding);
+      padding: var(--vb-button-size-large-padding);
     }
   }
 
@@ -167,7 +167,7 @@
   &__block {
     display: block;
     width: 100%;
-    font-size: var(--file-font-size-16);
+    font-size: var(--vb-font-size-16);
     height: var(--vb-button-size-large);
     line-height: var(--vb-button-size-large);
   }

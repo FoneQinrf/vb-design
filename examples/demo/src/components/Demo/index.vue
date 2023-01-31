@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script  setup>
+<script setup>
 import { decodeBase64 } from '@/utils';
 import { ref, onMounted, computed, nextTick } from 'vue';
 import { useRoute } from 'vue-router';
