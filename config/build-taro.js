@@ -9,7 +9,7 @@ if (fs.existsSync(resolve('packages/ui-taro/dist'))) {
 }
 
 const fileList = [];
-
+console.log(resolve());
 fs.copySync(resolve('packages/ui-h5/dist'), resolve('packages/ui-taro/dist'), {
   filter: file => {
     const arr = file.split(sep);
