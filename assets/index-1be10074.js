@@ -1,4 +1,4 @@
-import{J as e,d as o,o as c,c as t,a as p,w as l,$ as r,a0 as i}from"./index-7f94e479.js";import{b as s}from"./route-block-83d24a4e.js";const d={class:"markdown-body"},h=i(`<h1>Icon 图标</h1><hr><h3>介绍</h3><p>图标组件</p><h3>支持框架</h3><p><code class="">Vue3</code>、<code class="">Taro</code></p><h3>使用</h3><pre><code class="language-js"><span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;vue&#39;</span>;
+import{J as e,d as o,o as c,c as t,a as p,w as l,$ as r,a0 as i}from"./index-fc6b912c.js";import{b as s}from"./route-block-83d24a4e.js";const d={class:"markdown-body"},h=i(`<h1>Icon 图标</h1><hr><h3>介绍</h3><p>图标组件</p><h3>支持框架</h3><p><code class="">Vue3</code>、<code class="">Taro</code></p><h3>使用</h3><pre><code class="language-js"><span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;vue&#39;</span>;
 
 <span class="hljs-comment">// vue</span>
 <span class="hljs-keyword">import</span> { <span class="hljs-title class_">Icon</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;@vb-design/vb-ui&#39;</span>;
