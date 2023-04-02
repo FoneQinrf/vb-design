@@ -1,0 +1,55 @@
+{
+  "name": "@vb-design/request-module",
+  "version": "0.0.1",
+  "description": "CLI toolbox for common request-module for mx",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createApi": "node example/createApi/index.js",
+    "build": "rollup -c"
+  },
+  "engines": {
+    "node": ">=10.18",
+    "npm": ">=6",
+    "yarn": ">=1"
+  },
+  "files": [
+    "dist",
+    "example"
+  ],
+  "keywords": [
+    "scripts",
+    "request",
+    "module"
+  ],
+  "author": {
+    "name": "Fone`峰",
+    "email": "15921712019@163.com",
+    "url": "https://github.com/FoneQinrf"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "js-beautify": "^1.14.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "rollup": "^2.61.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "publishConfig": {
+    "registry": "https://npm.meditrusthealth.com"
+  }
+}

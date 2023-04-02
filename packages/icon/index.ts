@@ -1,3 +1,5 @@
+import Export from './components/Export.vue';
+import Launch from './components/Launch.vue';
 import At from './components/at.vue';
 import Attachment from './components/attachment.vue';
 import Backward from './components/backward.vue';
@@ -11,7 +13,6 @@ import CustomerService from './components/customer-service.vue';
 import Download from './components/download.vue';
 import ExclamationCircleFill from './components/exclamation-circle-fill.vue';
 import ExclamationPolygonFill from './components/exclamation-polygon-fill.vue';
-import Export from './components/Export.vue';
 import EyeInvisible from './components/eye-invisible.vue';
 import Eye from './components/eye.vue';
 import FaceFrownFill from './components/face-frown-fill.vue';
@@ -28,7 +29,6 @@ import Image from './components/image.vue';
 import Import from './components/import.vue';
 import InfoCircleFill from './components/info-circle-fill.vue';
 import Language from './components/language.vue';
-import Launch from './components/Launch.vue';
 import List from './components/list.vue';
 import LiveBroadcast from './components/live-broadcast.vue';
 import MessageBanned from './components/message-banned.vue';
@@ -79,6 +79,8 @@ import ThumbUp from './components/thumb-up.vue';
 import Upload from './components/upload.vue';
 import Voice from './components/voice.vue';
 export {
+  Export,
+  Launch,
   At,
   Attachment,
   Backward,
@@ -92,7 +94,6 @@ export {
   Download,
   ExclamationCircleFill,
   ExclamationPolygonFill,
-  Export,
   EyeInvisible,
   Eye,
   FaceFrownFill,
@@ -109,7 +110,6 @@ export {
   Import,
   InfoCircleFill,
   Language,
-  Launch,
   List,
   LiveBroadcast,
   MessageBanned,

@@ -1,0 +1,129 @@
+/* eslint-disable */ 
+import axios from 'axios' 
+import qs from 'qs' 
+let domain = '{{&domain}}' 
+let axiosInstance = axios.create() 
+export const getDomain = () => {
+  return domain
+}
+export const setDomain = ($domain) => {
+  domain = $domain
+}
+export const getAxiosInstance = () => {
+  return axiosInstance
+}
+export const setAxiosInstance = ($axiosInstance) => {
+  axiosInstance = $axiosInstance
+}
+export const request = (method, url, body, queryParameters, form, config)=>{
+  method = method.toLowerCase()
+  let keys = Object.keys(queryParameters)
+  let queryUrl = url
+  if ( keys.length > 0 ) {
+      queryUrl = url + '?' + qs.stringify(queryParameters)
+  }
+  if (!config) {
+    config = {
+      showNetworkError: true,
+    }
+  }
+  // let queryUrl = url+(keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')) : '')
+  if(body){
+      return axiosInstance[method](queryUrl,body,config)
+  } else if (method === 'get' || method === 'delete' || method === 'head' || method === 'option') {
+      return axiosInstance[method](queryUrl,config)
+  } else {
+      return axiosInstance[method](queryUrl,qs.stringify(form),config)
+  }
+}
+
+/*==========================================================
+ *                    {{&description}}
+ ==========================================================*/
+
+{{#methods}}
+/**
+* {{&summary}}
+* request: {{&methodName}}
+{{#parameters}}
+{{^isSingleton}} * @param {{&camelCaseName}} - {{&description}}{{/isSingleton}}
+{{/parameters}}
+*/
+export const {{&methodName}} = function(parameters = {}) {
+    const domain = parameters.$domain ? parameters.$domain : getDomain()
+    const config = parameters.$config
+    let path = '{{&path}}'
+    let body
+    let queryParameters = {}
+    let form = {}
+
+{{#parameters}}
+    {{#isQueryParameter}}
+        if(parameters['{{&camelCaseName}}'] !== undefined) {
+            queryParameters['{{&name}}'] = parameters['{{&camelCaseName}}']
+        }
+    {{/isQueryParameter}}
+
+    {{#isPathParameter}}
+        path = path.replace('{{brackets name}}', `${parameters['{{&camelCaseName}}']}`)
+    {{/isPathParameter}}
+
+    {{#isBodyParameter}}
+        if(parameters['{{&camelCaseName}}'] !== undefined) {
+            body = parameters['{{&camelCaseName}}']
+        }
+    {{/isBodyParameter}}
+
+    {{#isFormParameter}}
+        if(parameters['{{&camelCaseName}}'] !== undefined) {
+            form['{{&name}}'] = parameters['{{&camelCaseName}}']
+        }
+    {{/isFormParameter}}
+    {{#if isHeaderParameter}}
+    {{else}}
+    {{#required}}
+        if(parameters['{{&camelCaseName}}'] === undefined) {
+            return Promise.reject(new Error('Missing required {{&paramType}} parameter: {{&camelCaseName}}'))
+        }
+    {{/required}}
+    {{/if}}
+{{/parameters}}
+
+if(parameters.$queryParameters) {
+    Object.keys(parameters.$queryParameters).forEach(function(parameterName){
+        queryParameters[parameterName] = parameters.$queryParameters[parameterName]
+    });
+}
+    return request('{{toLowerCase method}}', domain + path, body, queryParameters, form, config)
+}
+
+export const {{&methodName}}URL = function(parameters = {}){
+    let queryParameters = {}
+    const domain = parameters.$domain ? parameters.$domain : getDomain()
+    let path = '{{&path}}'
+    {{#parameters}}
+        {{#isQueryParameter}}
+            if(parameters['{{&camelCaseName}}'] !== undefined){
+                queryParameters['{{&name}}'] = parameters['{{&camelCaseName}}']
+            }
+        {{/isQueryParameter}}
+        {{#isPathParameter}}
+            path = path.replace('{{brackets name}}', `${parameters['{{&camelCaseName}}']}`)
+        {{/isPathParameter}}
+    {{/parameters}}
+
+    if(parameters.$queryParameters) {
+        Object.keys(parameters.$queryParameters).forEach(function(parameterName) {
+            queryParameters[parameterName] = parameters.$queryParameters[parameterName]
+        })
+    }
+
+    let keys = Object.keys(queryParameters)
+    let result={
+        url:domain + path + (keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')): ''),
+        path:'{{&path}}',
+        queryTType: '{{toLowerCase method}}'
+    }
+    return result;
+}
+{{/methods}}
