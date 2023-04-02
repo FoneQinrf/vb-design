@@ -4,8 +4,7 @@
   "description": "CLI toolbox for common request-module for mx",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "createApi": "node example/createApi/index.js",
+    "test": "node example/createApi/index.js",
     "build": "rollup -c"
   },
   "engines": {
